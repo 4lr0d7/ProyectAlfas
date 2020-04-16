@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+
+#HTTPRESPONSE - JSONRESPONSE - RENDER
 
 # Create your views here.
+
+def home(request):
+    return render(request, 'home-rep.html')
