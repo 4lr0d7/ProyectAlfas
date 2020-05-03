@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'projectAlfas.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
+        'NAME': 'spotify',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
@@ -132,3 +132,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'Static'),
     ]
+AUTH_USER_MODEL = 'Usuarios.User'

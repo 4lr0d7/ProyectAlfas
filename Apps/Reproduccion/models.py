@@ -1,7 +1,9 @@
 import os
 from django.conf import settings
 from django.db import models
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
+from Apps.Usuarios.models import User
+
 def images_path():
     return os.path.join(settings.STATICFILES_DIRS, 'img/disc_photos1')
 
