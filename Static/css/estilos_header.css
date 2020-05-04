@@ -1,0 +1,12 @@
+#header-logo{
+    width: 100%;
+    height: 75px;
+    background-color: rgb(2, 2, 2);
+}
+#logo-spotify{
+    height: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}

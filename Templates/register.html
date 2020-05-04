@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Registro</title>
-</head>
-<body>
+{% extends 'header.html' %}
+{% load static %}
+{% block contenido %}
     <div class="container">
         <div class="container">
-            <h4 class = "text-center">Register para Spotify</h4>
+            <h4 class = ".text-reset text-center">Registrate con tu correo electrónico</h4>
         </div>
         <div class="container">
             {{form.non_field_errors}}
-            <form action = "#" method="POST">
+            <form action = "{% url 'register' %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
     
                 {% for field in form %}
@@ -32,4 +26,4 @@
         </a> </br>
     </div>
 </body>
-</html>
+{% endblock %}
